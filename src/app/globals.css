@@ -26,7 +26,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h1,
@@ -41,3 +41,4 @@ h6 {
 p {
   line-height: 1.6;
 }
+
