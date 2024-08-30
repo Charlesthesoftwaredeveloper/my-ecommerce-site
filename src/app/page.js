@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import FlashSaleSection from './FlashSaleSection'; 
+import RushHourDeals from './RushHourDeals'; 
 export default function HomePage() {
   // Timer function to calculate the time left until the next reset
   const calculateTimeLeft = () => {
@@ -428,7 +429,9 @@ export default function HomePage() {
     
   </div>
 </section>
-<FlashSaleSection timeLeft={timeLeft} />
+      <FlashSaleSection timeLeft={timeLeft} />
+      <RushHourDeals />
+
     </div>
   );
 }
