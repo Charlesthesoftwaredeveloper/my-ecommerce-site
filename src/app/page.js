@@ -1,7 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import FlashSaleSection from './FlashSaleSection'; 
-import RushHourDeals from './RushHourDeals'; 
+import RushHourDeals from './RushHourDeals';
+import BannerSection from './BannerSection';
+import BackToSchoolSection from './BackToSchoolSection';
+
 export default function HomePage() {
   // Timer function to calculate the time left until the next reset
   const calculateTimeLeft = () => {
@@ -54,6 +57,17 @@ export default function HomePage() {
   
     return () => clearInterval(timer); // Cleanup the interval on component unmount
   }, []);
+
+  const banners2 = [
+    { image: "/whats_cooling.gif", alt: "What's Cooling", link: "#" },
+    { image: "/whos_chilling.gif", alt: "Who's Chilling", link: "#" },
+    { image: "/whats_cooking.gif", alt: "What's Cooking", link: "#" },
+  ];
+
+  const banners3 = [
+    { image: "/bannersec2_1.gif", alt: "Your First Banner", link: "#" },
+    { image: "/bannersec2_2.jpg", alt: "Your Second Banner", link: "#" },
+  ];
   
   // Carousel State and Slides
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -400,38 +414,11 @@ export default function HomePage() {
   </div>
 </section>
  {/* Banner Section */}
-<section className="w-full bg-white py-6">
-  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-    
-    <a href="#" className="relative overflow-hidden rounded-lg shadow hover:shadow-lg transition ease-in-out duration-200">
-      <img
-        src="/whats_cooling.gif" 
-        alt="What's Cooling"
-        className="w-full h-auto"
-      />
-    </a>
-    
-    <a href="#" className="relative overflow-hidden rounded-lg shadow hover:shadow-lg transition ease-in-out duration-200">
-      <img
-        src="/whos_chilling.gif" 
-        alt="Who's Chilling"
-        className="w-full h-auto"
-      />
-    </a>
-    
-    <a href="#" className="relative overflow-hidden rounded-lg shadow hover:shadow-lg transition ease-in-out duration-200">
-      <img
-        src="/whats_cooking.gif" 
-        alt="What's Cooking"
-        className="w-full h-auto"
-      />
-    </a>
-    
-  </div>
-</section>
+      <BannerSection banners={banners2} />
       <FlashSaleSection timeLeft={timeLeft} />
       <RushHourDeals />
-
+      <BannerSection banners={banners3} />
+      <BackToSchoolSection />
     </div>
   );
 }
