@@ -61,9 +61,9 @@ const FlashSaleSection = ({ timeLeft }) => {
 
           <div 
             id="flash-sale-container" 
-            className="overflow-x-auto flex space-x-4 scroll-smooth" 
+            className="overflow-x-auto" 
             ref={containerRef}
-            style={{width: '100%', display: 'flex'}}
+            style={{width: '100%', display: 'flex', overflow: 'hidden'}}
           >
             <div className="flex space-x-4 w-max">
               {/* Product Card 1 */}
@@ -227,4 +227,3 @@ const FlashSaleSection = ({ timeLeft }) => {
 };
 
 export default FlashSaleSection;
-

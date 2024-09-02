@@ -4,6 +4,13 @@ import FlashSaleSection from './FlashSaleSection';
 import RushHourDeals from './RushHourDeals';
 import BannerSection from './BannerSection';
 import BackToSchoolSection from './BackToSchoolSection';
+import BackToSchoolDeals from '../components/BackToSchoolDeals.js';
+import BeautyEssentials from "../components/BeautyEssentials";
+import BeautyEssentialsSection from "../components/BeautyEssentialsSection"
+import ScreenAndSound from "../components/ScreenAndSound"
+import ScreenAndSoundSaleSection from "../components/ScreenAndSoundSaleSection"
+import TopSellingItems from "../components/TopSellingItems";
+import SmartPhoneDiscounts from "../components/SmartPhoneDiscounts"
 
 export default function HomePage() {
   // Timer function to calculate the time left until the next reset
@@ -69,6 +76,10 @@ export default function HomePage() {
     { image: "/bannersec2_2.jpg", alt: "Your Second Banner", link: "#" },
   ];
   
+  const banners4 = [
+    { image: "/bannersec_3_1.png", alt: "Your First Banner", link: "#" },
+    { image: "/bannersec_3_2.jpg", alt: "Your Second Banner", link: "#" },
+  ];
   // Carousel State and Slides
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -419,6 +430,14 @@ export default function HomePage() {
       <RushHourDeals />
       <BannerSection banners={banners3} />
       <BackToSchoolSection />
+      <BackToSchoolDeals />
+      <BeautyEssentials />
+      <BeautyEssentialsSection />
+      <ScreenAndSound />
+      <ScreenAndSoundSaleSection />
+      <BannerSection banners={banners4} />
+      <TopSellingItems />
+      <SmartPhoneDiscounts />
     </div>
   );
 }

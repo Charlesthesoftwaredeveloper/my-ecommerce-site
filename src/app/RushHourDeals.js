@@ -51,11 +51,12 @@ const RushHourDeals = () => {
           </button>
 
           <div 
-            id="rush-hour-container" 
-            className="overflow-x-auto flex space-x-4 scroll-smooth" 
+            id="flash-sale-container" 
+            className="overflow-x-auto" 
             ref={containerRef}
-            style={{width: '100%', display: 'flex'}}
+            style={{width: '100%', display: 'flex', overflow: 'hidden'}}
           >
+        
             <div className="flex space-x-4 w-max">
               {/* Product Card 1 */}
               <a href="#" className="block min-w-[180px] max-w-[180px] h-full border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition ease-in-out duration-200 relative">
