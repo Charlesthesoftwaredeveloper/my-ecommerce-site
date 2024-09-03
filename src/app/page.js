@@ -11,6 +11,21 @@ import ScreenAndSound from "../components/ScreenAndSound"
 import ScreenAndSoundSaleSection from "../components/ScreenAndSoundSaleSection"
 import TopSellingItems from "../components/TopSellingItems";
 import SmartPhoneDiscounts from "../components/SmartPhoneDiscounts"
+import SmartPhoneDiscountsSection from "../components/SmartPhoneDiscountsSection.js"
+import ApplianceUpgrade from "../components/ApplianceUpgrade"
+import AppliancesUpgradeDeals from "../components/AppliancesUpgradeDeals";
+import FeaturedCategories from '../components/FeaturedCategories';
+import ShopCollections from "../components/ShopCollections";
+import TopFashionDeals from "../components/TopFashionDeals";
+import NewArrivalSection from "../components/NewArrivalSection";
+import OfficialStoresSection from "../components/OfficialStoresSection"
+import NiveaOfficialStore from "../components/NiveaOfficialStore";
+import RoyalDeals from "../components/RoyalDeals";
+import BeveragesDeals from "../components/BeveragesDeals";
+import HandpickedDeals from "../components/HandpickedDeals";
+
+
+
 
 export default function HomePage() {
   // Timer function to calculate the time left until the next reset
@@ -282,148 +297,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Featured Categories Section */}
-<section className="w-full bg-white py-6">
-  <div className="max-w-7xl mx-auto px-6">
-    {/* Category Grid - First Row */}
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/new_arrival.gif" 
-            alt="New Arrival"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">New Arrival</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/clearance_sales.png" 
-            alt="Clearance Sale"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Clearance Sale</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/appliances_deals.png" 
-            alt="Appliance Deals"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Appliance Deals</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/beverages.gif" 
-            alt="Beverages"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Beverages</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/Phone_Tablet_deals.png" 
-            alt="Phones & Tablets"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Phones & Tablets</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/fashion_deals.gif" 
-            alt="Fashion Deals"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Fashion Deals</h3>
-        </div>
-      </a>
-    </div>
-
-    {/* Category Grid - Second Row */}
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-6">
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/special_offers.png" 
-            alt="Special Offers"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Special Offers</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/electronics_deals.png" 
-            alt="Electronic Deals"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Electronic Deals</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/mobile_accesories.png" 
-            alt="Mobile Accessories"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Mobile Accessories</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/starting_from_65.jpg" 
-            alt="Starting from ₦65,000"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Starting from ₦65,000</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/beauty_deals.png" 
-            alt="Beauty Deals"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Beauty Deals</h3>
-        </div>
-      </a>
-
-      <a href="#" className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200">
-        <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-          <img
-            src="/home_essentials.png" 
-            alt="Home Essentials"
-            className="w-full h-auto rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mt-2">Home Essentials</h3>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+      <FeaturedCategories />
  {/* Banner Section */}
       <BannerSection banners={banners2} />
       <FlashSaleSection timeLeft={timeLeft} />
@@ -438,6 +312,17 @@ export default function HomePage() {
       <BannerSection banners={banners4} />
       <TopSellingItems />
       <SmartPhoneDiscounts />
+      <SmartPhoneDiscountsSection />
+      <ApplianceUpgrade />
+      <AppliancesUpgradeDeals />
+      <ShopCollections />
+      <TopFashionDeals />
+      <NewArrivalSection />
+      <OfficialStoresSection />
+      <NiveaOfficialStore />
+      <RoyalDeals />
+      <BeveragesDeals />
+     < HandpickedDeals />
     </div>
   );
 }

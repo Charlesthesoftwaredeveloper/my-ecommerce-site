@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
-import "./globals.css"; // Ensure you have this to include your global styles
+import "./globals.css";
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -62,11 +63,7 @@ export default function RootLayout({ children }) {
         <main className="max-w-7xl mx-auto p-6">{children}</main>
 
         {/* Footer */}
-        <footer className="w-full bg-[#633185] text-white p-4 mt-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <p>&copy; 2024 Selverthing. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer /> 
       </body>
     </html>
   );

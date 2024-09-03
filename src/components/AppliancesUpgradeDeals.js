@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const RushHourDeals = () => {
+const AppliancesUpgradeDeals = () => {
   const [showArrows, setShowArrows] = useState(false);
   const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef(null);
@@ -22,61 +22,63 @@ const RushHourDeals = () => {
   const products = [
     {
       id: 1,
-      name: '1 Pcs Ear Clip Gold Non Piercing',
-      originalPrice: '₦5,000',
-      discountPrice: '₦2,614',
-      discount: '-48%',
-      image: 'rushhour_1.jpg',
+      name: 'Syinix Electric Kettle 2.2L',
+      originalPrice: '₦ 7,800',
+      discountPrice: '₦ 6,390',
+      discount: '-18%',
+      image: '/appliances_upgrade_1.jpg', // Ensure these paths are correct
     },
     {
       id: 2,
-      name: 'New Fortified Pixiu Feng ring',
-      originalPrice: '₦7,900',
-      discountPrice: '₦3,578',
-      discount: '-55%',
-      image: 'rushhour_2.jpg',
+      name: 'Skyrun 200 Litres Chest Freezer',
+      originalPrice: '₦ 495,802',
+      discountPrice: '₦ 285,990',
+      discount: '-42%',
+      image: '/appliances_upgrade_2.jpg',
     },
     {
       id: 3,
-      name: 'Mens Outdoor Casual Palm Slippers',
-      originalPrice: '₦15,000',
-      discountPrice: '₦13,900',
-      discount: '-24%',
-      image: 'rushhour_3.jpg',
+      name: 'Glamstar 1.5HP Split AC',
+      originalPrice: '₦ 350,008',
+      discountPrice: '₦ 300,048',
+      discount: '-14%',
+      image: '/appliances_upgrade_3.jpg',
     },
     {
       id: 4,
-      name: 'Luxury Stoned Corporate Shoe',
-      originalPrice: '₦39,000',
-      discountPrice: '₦27,000',
-      discount: '-33%',
-      image: 'rushhour_4.jpg',
+      name: 'JD SMP 1200 Watts Dry Iron',
+      originalPrice: '₦ 10,000',
+      discountPrice: '₦ 6,990',
+      discount: '-30%',
+      image: '/appliances_upgrade_4.jpg',
     },
     {
       id: 5,
-      name: 'Pro Midzip Laptop Bag',
-      originalPrice: '₦24,900',
-      discountPrice: '₦22,845',
-      discount: '-8%',
-      image: 'rushhour_5.jpg',
+      name: 'itel M1 Multi-function Blender',
+      originalPrice: '₦ 28,000',
+      discountPrice: '₦ 21,735',
+      discount: '-22%',
+      image: '/appliances_upgrade_5.jpg',
     },
     {
       id: 6,
-      name: 'Mens Non Fade Stock Jean',
-      originalPrice: '₦16,800',
-      discountPrice: '₦15,500',
-      discount: '-8%',
-      image: 'rushhour_6.jpg',
+      name: 'Zyre 2 Slice Sandwich Maker',
+      originalPrice: '₦ 30,000',
+      discountPrice: '₦ 20,500',
+      discount: '-32%',
+      image: '/appliances_upgrade_6.jpg',
     },
+    // Add more products here if needed
   ];
 
   return (
     <section className="w-full bg-white py-6 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-blue-200 p-2 rounded-t-lg flex justify-between items-center">
-          <h2 className="text-xl font-semibold text-gray-800">Rush Hour Deals</h2>
+          <h2 className="text-xl font-semibold text-gray-800">Appliances Upgrade Deals</h2>
           <a href="#" className="text-blue-600 hover:underline text-sm">SEE ALL</a>
         </div>
+
         <div 
           className="relative border border-gray-200 rounded-b-lg"
           onMouseEnter={() => setShowArrows(true)} 
@@ -99,6 +101,7 @@ const RushHourDeals = () => {
           </button>
 
           <div 
+            id="appliances-upgrade-deals" 
             className="overflow-x-auto flex space-x-4 no-scrollbar p-4" 
             ref={containerRef}
             style={{width: '100%', display: 'flex', overflow: 'hidden'}}
@@ -131,4 +134,4 @@ const RushHourDeals = () => {
   );
 };
 
-export default RushHourDeals;
+export default AppliancesUpgradeDeals;

@@ -1,9 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const RushHourDeals = () => {
+const HandpickedDeals = () => {
   const [showArrows, setShowArrows] = useState(false);
   const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef(null);
+
+  const products = [
+    { id: 1, name: 'Product 1', price: '₦5,000', originalPrice: '₦6,000', image: '/handpicked_1.jpg', discount: '-17%' },
+    { id: 2, name: 'Product 2', price: '₦4,800', originalPrice: '₦5,800', image: '/handpicked_2.jpg', discount: '-20%' },
+    { id: 3, name: 'Product 3', price: '₦3,500', originalPrice: '₦4,500', image: '/handpicked_3.jpg', discount: '-22%' },
+    { id: 4, name: 'Product 4', price: '₦7,100', originalPrice: '₦8,200', image: '/handpicked_4.jpg', discount: '-15%' },
+    { id: 5, name: 'Product 5', price: '₦2,800', originalPrice: '₦3,400', image: '/handpicked_5.jpg', discount: '-18%' },
+    { id: 6, name: 'Product 6', price: '₦6,700', originalPrice: '₦7,500', image: '/handpicked_6.jpg', discount: '-12%' }
+  ];
 
   useEffect(() => {
     if (containerRef.current) {
@@ -19,64 +28,14 @@ const RushHourDeals = () => {
     containerRef.current.scrollBy({ left: containerWidth, behavior: 'smooth' });
   };
 
-  const products = [
-    {
-      id: 1,
-      name: '1 Pcs Ear Clip Gold Non Piercing',
-      originalPrice: '₦5,000',
-      discountPrice: '₦2,614',
-      discount: '-48%',
-      image: 'rushhour_1.jpg',
-    },
-    {
-      id: 2,
-      name: 'New Fortified Pixiu Feng ring',
-      originalPrice: '₦7,900',
-      discountPrice: '₦3,578',
-      discount: '-55%',
-      image: 'rushhour_2.jpg',
-    },
-    {
-      id: 3,
-      name: 'Mens Outdoor Casual Palm Slippers',
-      originalPrice: '₦15,000',
-      discountPrice: '₦13,900',
-      discount: '-24%',
-      image: 'rushhour_3.jpg',
-    },
-    {
-      id: 4,
-      name: 'Luxury Stoned Corporate Shoe',
-      originalPrice: '₦39,000',
-      discountPrice: '₦27,000',
-      discount: '-33%',
-      image: 'rushhour_4.jpg',
-    },
-    {
-      id: 5,
-      name: 'Pro Midzip Laptop Bag',
-      originalPrice: '₦24,900',
-      discountPrice: '₦22,845',
-      discount: '-8%',
-      image: 'rushhour_5.jpg',
-    },
-    {
-      id: 6,
-      name: 'Mens Non Fade Stock Jean',
-      originalPrice: '₦16,800',
-      discountPrice: '₦15,500',
-      discount: '-8%',
-      image: 'rushhour_6.jpg',
-    },
-  ];
-
   return (
     <section className="w-full bg-white py-6 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-blue-200 p-2 rounded-t-lg flex justify-between items-center">
-          <h2 className="text-xl font-semibold text-gray-800">Rush Hour Deals</h2>
+          <h2 className="text-xl font-semibold text-gray-800">Handpicked Deals</h2>
           <a href="#" className="text-blue-600 hover:underline text-sm">SEE ALL</a>
         </div>
+
         <div 
           className="relative border border-gray-200 rounded-b-lg"
           onMouseEnter={() => setShowArrows(true)} 
@@ -116,7 +75,7 @@ const RushHourDeals = () => {
                 <div className="p-2">
                   <h3 className="text-sm font-semibold text-gray-700 truncate">{product.name}</h3>
                   <div className="flex flex-col items-start mt-1">
-                    <span className="text-lg font-bold text-black">{product.discountPrice}</span>
+                    <span className="text-lg font-bold text-black">{product.price}</span>
                     {product.originalPrice && (
                       <span className="text-sm line-through text-gray-400">{product.originalPrice}</span>
                     )}
@@ -131,4 +90,4 @@ const RushHourDeals = () => {
   );
 };
 
-export default RushHourDeals;
+export default HandpickedDeals;

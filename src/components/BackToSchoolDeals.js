@@ -26,7 +26,7 @@ const BackToSchoolDeals = () => {
       originalPrice: '₦ 56,279',
       discountPrice: '₦ 10,314',
       discount: '-82%',
-      image: '/schooldeal_1.jpg', // Ensure these paths are correct
+      image: '/schooldeal_1.jpg', 
     },
     {
       id: 2,
@@ -68,7 +68,6 @@ const BackToSchoolDeals = () => {
       discount: '-41%',
       image: '/schooldeal_6.jpg',
     }
-    // Add more products here if needed
   ];
 
   return (
@@ -102,7 +101,7 @@ const BackToSchoolDeals = () => {
 
           <div 
             id="back-to-school-deals" 
-            className="overflow-x-auto" 
+            className="overflow-x-auto flex space-x-4 no-scrollbar p-4" 
             ref={containerRef}
             style={{width: '100%', display: 'flex', overflow: 'hidden'}}
           >
@@ -110,15 +109,19 @@ const BackToSchoolDeals = () => {
               <div key={product.id} className="min-w-[200px] max-w-[200px] bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="relative">
                   <img src={product.image} alt={product.name} className="w-full h-36 object-cover" />
-                  <div className="absolute top-0 left-0 bg-orange-200 text-orange-800 text-xs font-bold px-2 py-1 rounded-br-md">
-                    {product.discount}
-                  </div>
+                  {product.discount && (
+                    <div className="absolute top-0 left-0 bg-orange-200 text-orange-800 text-xs font-bold px-2 py-1 rounded-br-md">
+                      {product.discount}
+                    </div>
+                  )}
                 </div>
                 <div className="p-2">
                   <h3 className="text-sm font-semibold text-gray-700 truncate">{product.name}</h3>
                   <div className="flex flex-col items-start mt-1">
                     <span className="text-lg font-bold text-black">{product.discountPrice}</span>
-                    <span className="text-sm line-through text-gray-400">{product.originalPrice}</span>
+                    {product.originalPrice && (
+                      <span className="text-sm line-through text-gray-400">{product.originalPrice}</span>
+                    )}
                   </div>
                 </div>
               </div>
