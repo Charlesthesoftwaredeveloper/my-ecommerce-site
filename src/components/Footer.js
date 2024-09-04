@@ -5,43 +5,68 @@ const Footer = () => {
     <footer className="bg-gray-800 text-gray-300">
       {/* Top Section */}
       <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-          <div className="text-center lg:text-left">
-            <h4 className="text-lg font-semibold">NEW TO SELVERTHING?</h4>
-            <p>Subscribe to our newsletter to get updates on our latest offers!</p>
+        {/* Flex container for horizontal alignment */}
+        <div className="flex justify-between items-start">
+          
+          {/* Left: Brand Logo */}
+          <div className="flex items-start">
+            <img src="/selverthing_logo.svg" alt="Selverthing Logo" className="w-20 h-auto" />
           </div>
-          <div className="flex space-x-4 items-center">
-            <input
-              type="email"
-              placeholder="Enter E-mail Address"
-              className="px-4 py-2 rounded-md text-black focus:outline-none"
-            />
-            <button className="px-4 py-2 border border-gray-300 hover:bg-gray-700 transition rounded-md">MALE</button>
-            <button className="px-4 py-2 border border-gray-300 hover:bg-gray-700 transition rounded-md">FEMALE</button>
+
+          {/* Center: Subscription Section */}
+          <div className="flex flex-col items-start lg:w-1/2">
+            <h4 className="text-lg font-semibold mb-2">
+              NEW TO SELVERTHING?
+            </h4>
+            <p className="mb-4">
+              Subscribe to our newsletter to get updates on our latest offers!
+            </p>
+            <div className="flex items-center space-x-2 mb-4">
+              <input
+                type="email"
+                placeholder="Enter E-mail Address"
+                className="px-4 py-2 rounded-md text-black focus:outline-none"
+              />
+              <button className="px-4 py-2 border border-gray-300 hover:bg-gray-700 transition rounded-md">
+                MALE
+              </button>
+              <button className="px-4 py-2 border border-gray-300 hover:bg-gray-700 transition rounded-md">
+                FEMALE
+              </button>
+            </div>
+            {/* Privacy Section */}
+            <div className="flex items-start space-x-2">
+              <input type="checkbox" id="privacy-policy" className="h-4 w-4 mt-1" />
+              <label htmlFor="privacy-policy" className="text-sm">
+                I agree to Selverthing's Privacy and Cookie Policy. You can unsubscribe from newsletters
+                at any time. <span className="text-yellow-500">I accept the Legal Terms</span>
+              </label>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-between items-center mt-4">
-          <div className="flex items-center space-x-2">
-            <input type="checkbox" id="privacy-policy" className="h-4 w-4" />
-            <label htmlFor="privacy-policy">
-              I agree to Selverthings's Privacy and Cookie Policy. You can unsubscribe from newsletters at any time. 
-              <span className="text-yellow-500"> I accept the Legal Terms</span>
-            </label>
-          </div>
-          <div className="flex space-x-4 mt-4 lg:mt-0">
-            <p>DOWNLOAD SELVERTHING FREE APP</p>
+
+          {/* Right: App Download Links */}
+          <div className="flex flex-col items-end">
+            <p className="text-sm mb-2">DOWNLOAD SELVERTHING FREE APP</p>
             <div className="flex space-x-2">
-              <img src="/appstore.png" alt="App Store" className="w-20" />
-              <img src="/playstore.png" alt="Play Store" className="w-20" />
+              <img
+                src="/app_store_icon/apple_store_icon.svg"
+                alt="Apple Store"
+                className="w-20 h-auto"
+              />
+              <img
+                src="/app_store_icon/google_play_store_badge_EN.svg"
+                alt="Google Play Store"
+                className="w-20 h-auto"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Section */}
+      {/* Bottom Sections (to be worked on after the top section is perfected) */}
       <div className="bg-gray-700">
-        <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Column 1 */}
+        <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
+          {/* Column 1: Need Help */}
           <div>
             <h5 className="text-lg font-semibold mb-4">NEED HELP?</h5>
             <ul className="space-y-2">
@@ -51,7 +76,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 2 */}
+          {/* Column 2: Useful Links */}
           <div>
             <h5 className="text-lg font-semibold mb-4">USEFUL LINKS</h5>
             <ul className="space-y-2">
@@ -67,24 +92,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3 */}
+          {/* Column 3: About */}
           <div>
-            <h5 className="text-lg font-semibold mb-4">ABOUT Selverthing</h5>
+            <h5 className="text-lg font-semibold mb-4">ABOUT SELVERTHING</h5>
             <ul className="space-y-2">
               <li><a href="#">About us</a></li>
-              <li><a href="#">Jumia careers</a></li>
-              <li><a href="#">Jumia Express</a></li>
+              <li><a href="#">Careers</a></li>
               <li><a href="#">Terms and Conditions</a></li>
               <li><a href="#">Privacy Notice</a></li>
-              <li><a href="#">Jumia Store Credit Terms & Conditions</a></li>
-              <li><a href="#">Jumia Payment Information Guidelines</a></li>
-              <li><a href="#">Jumia Global</a></li>
               <li><a href="#">Official Stores</a></li>
               <li><a href="#">Flash Sales</a></li>
             </ul>
           </div>
 
-          {/* Column 4 */}
+          {/* Column 4: Make Money */}
           <div>
             <h5 className="text-lg font-semibold mb-4">MAKE MONEY WITH SELVERTHING</h5>
             <ul className="space-y-2">
@@ -92,29 +113,44 @@ const Footer = () => {
               <li><a href="#">Vendor hub</a></li>
               <li><a href="#">Become a Sales Consultant</a></li>
               <li><a href="#">Become a Logistics Service Partner</a></li>
-              <li><a href="#">Join the Selverthing KOL Program</a></li>
+              <li><a href="#">Join the KOL Program</a></li>
+            </ul>
+          </div>
+
+          {/* Column 5: International */}
+          <div>
+            <h5 className="text-lg font-semibold mb-4">SELVERTHING INTERNATIONAL</h5>
+            <ul className="space-y-2">
+              <li><a href="#">Algeria</a></li>
+              <li><a href="#">Egypt</a></li>
+              <li><a href="#">Ghana</a></li>
+              <li><a href="#">Ivory Coast</a></li>
+              <li><a href="#">Kenya</a></li>
+              <li><a href="#">Morocco</a></li>
+              <li><a href="#">Senegal</a></li>
+              <li><a href="#">Tunisia</a></li>
+              <li><a href="#">Uganda</a></li>
+              <li><a href="#">Zando</a></li>
             </ul>
           </div>
         </div>
 
-        {/* Jumia International */}
+        {/* Social Media and Payment Logos Section */}
         <div className="max-w-7xl mx-auto px-6 py-8">
-          <h5 className="text-lg font-semibold mb-4">SELVERTHING INTERNATIONAL</h5>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <ul>
-              <li>Algeria</li>
-              <li>Egypt</li>
-              <li>Ghana</li>
-              <li>Ivory Coast</li>
-              <li>Kenya</li>
-            </ul>
-            <ul>
-              <li>Morocco</li>
-              <li>Senegal</li>
-              <li>Tunisia</li>
-              <li>Uganda</li>
-              <li>Zando</li>
-            </ul>
+          <div className="flex justify-between items-center">
+            {/* Social Media */}
+            <div className="flex space-x-4">
+              <a href="#"><i className="ri-facebook-fill text-2xl"></i></a>
+              <a href="#"><i className="ri-instagram-fill text-2xl"></i></a>
+              <a href="#"><i className="ri-twitter-fill text-2xl"></i></a>
+              <a href="#"><i className="ri-youtube-fill text-2xl"></i></a>
+            </div>
+
+            {/* Payment Methods */}
+            <div className="flex space-x-4">
+              <i className="ri-visa-line text-3xl"></i>
+              <i className="ri-mastercard-line text-3xl"></i>
+            </div>
           </div>
         </div>
       </div>
