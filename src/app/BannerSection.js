@@ -1,4 +1,5 @@
 // components/BannerSection.js
+import Image from "next/image";
 export default function BannerSection({ banners }) {
   return (
     <section className="w-full bg-white py-6">
@@ -9,7 +10,7 @@ export default function BannerSection({ banners }) {
             href={banner.link}
             className="relative overflow-hidden rounded-lg shadow hover:shadow-lg transition ease-in-out duration-200"
           >
-            <img
+            <Image
               src={banner.image}
               alt={banner.alt}
               className="w-full h-auto"

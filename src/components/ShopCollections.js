@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 const collections = [
   { id: 1, name: 'Fashion Deals', image: '/Fashion_deals.jpg' },
@@ -30,7 +31,7 @@ const ShopCollections = () => {
               className="block transform hover:scale-105 hover:shadow-lg transition ease-in-out duration-200"
             >
               <div className="text-center border border-transparent hover:border-[#f3993e] rounded-lg p-2">
-                <img
+                <Image
                   src={collection.image}
                   alt={collection.name}
                   className="w-full h-auto rounded-lg"

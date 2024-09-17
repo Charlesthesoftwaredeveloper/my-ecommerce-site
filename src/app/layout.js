@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
+import Image from "next/image";
 
 export const metadata = {
   title: "Selverthing E-commerce",
@@ -27,7 +28,7 @@ export default function RootLayout({ children }) {
           <nav className="max-w-7xl mx-auto flex justify-between items-center">
             {/* Logo Image */}
             <div className="flex items-center">
-              <img
+              <Image
                 src="/selverthing-logo.png"
                 alt="Site Logo"
                 className="h-10 w-auto mr-4"

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           
           {/* Left: Brand Logo */}
           <div className="flex items-start">
-            <img src="/selverthing_logo.svg" alt="Selverthing Logo" className="w-20 h-auto" />
+            <Image src="/selverthing_logo.svg" alt="Selverthing Logo" className="w-20 h-auto" />
           </div>
 
           {/* Center: Subscription Section */}
@@ -38,8 +39,7 @@ const Footer = () => {
             <div className="flex items-start space-x-2">
               <input type="checkbox" id="privacy-policy" className="h-4 w-4 mt-1" />
               <label htmlFor="privacy-policy" className="text-sm">
-                I agree to Selverthing's Privacy and Cookie Policy. You can unsubscribe from newsletters
-                at any time. <span className="text-yellow-500">I accept the Legal Terms</span>
+               {"I agree to Selverthing's Privacy and Cookie Policy. You can unsubscribe from newsletters at any time."} <span className="text-yellow-500">I accept the Legal Terms</span>
               </label>
             </div>
           </div>
@@ -48,12 +48,12 @@ const Footer = () => {
           <div className="flex flex-col items-end">
             <p className="text-sm mb-2">DOWNLOAD SELVERTHING FREE APP</p>
             <div className="flex space-x-2">
-              <img
+              <Image
                 src="/app_store_icon/apple_store_icon.svg"
                 alt="Apple Store"
                 className="w-20 h-auto"
               />
-              <img
+              <Image
                 src="/app_store_icon/google_play_store_badge_EN.svg"
                 alt="Google Play Store"
                 className="w-20 h-auto"

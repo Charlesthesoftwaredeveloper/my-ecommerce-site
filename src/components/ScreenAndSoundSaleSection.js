@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Image from "next/image";
 
 const ScreenAndSoundSaleSection = () => {
   const [showArrows, setShowArrows] = useState(false);
@@ -116,7 +117,7 @@ const ScreenAndSoundSaleSection = () => {
             {products.map((product) => (
               <div key={product.id} className="min-w-[200px] max-w-[200px] bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="relative">
-                  <img src={product.image} alt={product.name} className="w-full h-36 object-cover" />
+                  <Image src={product.image} alt={product.name} className="w-full h-36 object-cover" />
                   {product.discount && (
                     <div className="absolute top-0 left-0 bg-orange-200 text-orange-800 text-xs font-bold px-2 py-1 rounded-br-md">
                       {product.discount}

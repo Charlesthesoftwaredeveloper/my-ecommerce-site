@@ -23,6 +23,7 @@ import NiveaOfficialStore from "../components/NiveaOfficialStore";
 import RoyalDeals from "../components/RoyalDeals";
 import BeveragesDeals from "../components/BeveragesDeals";
 import HandpickedDeals from "../components/HandpickedDeals";
+import Image from "next/image";
 
 
 
@@ -135,7 +136,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
           {/* Logo */}
           <div className="flex items-center">
-            <img
+            <Image
               src="/selverthing_logo.svg"
               alt="Site Logo"
               className="h-10 w-auto mr-4"
@@ -251,7 +252,7 @@ export default function HomePage() {
                 key={slide.id}
                 className={`${index === currentSlide ? "block" : "hidden"} transition duration-500 ease-in-out w-full h-full`}
               >
-                <img
+                <Image
                   src={slide.image}
                   alt={slide.alt}
                   className="w-full h-full object-cover rounded-lg"
@@ -292,7 +293,7 @@ export default function HomePage() {
 
             {/* Promo Image */}
             <div className="bg-white shadow-lg rounded-lg p-2 text-center">
-              <img src="/shop_earn_toptiny_ad.png" alt="Shop & Earn" className="w-full h-auto rounded-lg" />
+              <Image src="/shop_earn_toptiny_ad.png" alt="Shop & Earn" className="w-full h-auto rounded-lg" />
             </div>
           </div>
         </div>

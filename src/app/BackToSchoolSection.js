@@ -1,4 +1,5 @@
 // components/BackToSchoolSection.js
+import Image from "next/image";
 export default function BackToSchoolSection() {
     const banners = [
       { image: "/primarysch.png", alt: "Shop for Primary School", link: "#" },
@@ -21,7 +22,7 @@ export default function BackToSchoolSection() {
                 href={banner.link}
                 className="relative overflow-hidden rounded-lg shadow hover:shadow-lg transition ease-in-out duration-200"
               >
-                <img
+                <Image
                   src={banner.image}
                   alt={banner.alt}
                   className="w-full h-auto"

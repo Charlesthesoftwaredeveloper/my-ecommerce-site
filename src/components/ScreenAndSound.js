@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 const screenAndSoundSale = [
   {
@@ -35,7 +36,7 @@ const ScreenAndSoundSale = () => {
               key={item.id} 
               className={`flex-1 relative rounded-lg overflow-hidden ${item.backgroundColor}`}
             >
-              <img 
+              <Image
                 src={item.image} 
                 alt={item.category} 
                 className="w-full h-full object-cover" 
