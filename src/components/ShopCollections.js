@@ -2,7 +2,7 @@ import React from 'react';
 import Image from "next/image";
 
 const collections = [
-  { id: 1, name: 'Fashion Deals', image: '/Fashion_deals.jpg' },
+  { id: 1, name: 'Fashion Deals', image: '/fashion_deals.jpg' },
   { id: 2, name: 'Beauty Deals', image: '/beauty_deals.jpg' },
   { id: 3, name: 'Home Entertainment', image: '/home_entertainment.jpg' },
   { id: 4, name: 'Appliances Deals', image: '/appliances_deals.jpg' },

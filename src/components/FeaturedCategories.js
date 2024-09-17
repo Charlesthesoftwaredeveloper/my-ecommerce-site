@@ -6,7 +6,7 @@ const categories = [
   { id: 2, name: 'Clearance Sale', image: '/clearance_sales.png' },
   { id: 3, name: 'Appliance Deals', image: '/appliances_deals.png' },
   { id: 4, name: 'Beverages', image: '/beverages.gif' },
-  { id: 5, name: 'Phones & Tablets', image: '/Phone_Tablet_deals.png' },
+  { id: 5, name: 'Phones & Tablets', image: '/phone_tablet_deals.png' },
   { id: 6, name: 'Fashion Deals', image: '/fashion_deals.gif' },
   { id: 7, name: 'Special Offers', image: '/special_offers.png' },
   { id: 8, name: 'Electronic Deals', image: '/electronics_deals.png' },
