@@ -54,7 +54,7 @@ const Footer = () => {
                 className="w-20 h-auto"
               />
               <Image
-                src="/app_store_icon/google_play_store_badge_EN.svg"
+                src="/app_store_icon/google_play_store_badge_en.svg"
                 alt="Google Play Store"
                 className="w-20 h-auto"
               />
